@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0e1222;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0e1222;
+  padding: 20px 60px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.nav-links li a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding-bottom: 4px;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(to right, #a066f5, #4bb1f2);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 40px 20px;
+  text-align: center;
+  gap: 40px;
+  margin-left: 200px;
+}
+
+.text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.text h2 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(to right, #a066f5, #4bb1f2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.text p {
+  margin: 20px 0;
+  color: #bdbdbd;
+}
+
+.image-wrapper {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-ring {
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(to right, #a066f5, #4bb1f2);
+  display: inline-block;
+}
+
+.image-border {
+  border-radius: 50%;
+  background-color: #0e1222;
+  padding: 10px;
+}
+
+.gradient-ring img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+section#skills {
+  padding: 0 20px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
+}
+
+#skills h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border: 1px solid #4bb1f2;
+  border-radius: 16px;
+  padding: 30px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.card img {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.card p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
+  border-radius: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #a066f5, #4bb1f2);
+}
+
+/* Soft Skills Heading Font Size */
+#skills h3 {
+  font-size: 28px;
+}
+
+section#projects {
+  padding: 60px 20px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projects h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card.project {
+  text-align: left;
+  color: #cccccc;
+  width: 600px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #4bb1f2;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card.project p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 100%;
+}
+
+/* Education Section */
+section#education {
+  padding: 60px 20px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#education h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.education-item {
+  display: flex;
+  gap: 30px;
+  text-align: left;
+  position: relative;
+}
+
+.education-year {
+  min-width: 100px;
+  font-weight: 600;
+  color: #a066f5;
+}
+
+.education-content {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #4bb1f2;
+  border-radius: 12px;
+}
+
+.education-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.education-content p {
+  color: #bdbdbd;
+  line-height: 1.6;
+}
+
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: 45px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #a066f5, #4bb1f2);
+}
+
+.education-item:last-child::before {
+  height: 50%;
+}
+
+.education-item::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #a066f5, #4bb1f2);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    margin-left: 0;
+  }
+
+  .text h2 {
+    font-size: 36px;
+  }
+
+  .highlight {
+    font-size: 32px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .image-wrapper {
+    margin-top: 30px;
+  }
+
+  .skills-grid, .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .skills-list {
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .card.project {
+    width: 100%;
+    padding: 25px;
+  }
+
+  /* Education mobile styles */
+  .education-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .education-item::before {
+    left: 6px;
+  }
+
+  .education-item::after {
+    left: 0;
+  }
+
+  .education-year {
+    padding-left: 20px;
+  }
+}
